@@ -1,4 +1,4 @@
-# Data Strcuture SearchEngine
+# Data Strcuture Search Engine
 Search Engine for Linear Data Structures. 
 
 # Extras 
