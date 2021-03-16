@@ -126,7 +126,7 @@ class Script:
             
             def enqueue(self, new_value):
                 if self.has_space():
-                    new_node = new_value
+                    new_node = Node(new_value)
                     if self.size == 0:
                         self.head_node = new_node 
                         self.tail_node = new_node 
