@@ -5,13 +5,13 @@ You can now search up the 7 data structures by typing the desired structure in t
 Made in Python.
 
 # Controls 
-- /quit: Quits the program 
-- Node: Views the basic node class
-- LinkedList: Views the Linked List Structure in Python
-- Stack: Views the Stack Structure in Python 
-- Queue: Views the Queue Structure in Python
-- Hash Map: Views the Hash Map Structure in Python 
-- Binary Search Tree: Views the Binary Search Tree in Python
+- `/quit`: Quits the program 
+- `Node`: Views the basic node class
+- `LinkedList`: Views the Linked List Structure in Python
+- `Stack`: Views the Stack Structure in Python 
+- `Queue`: Views the Queue Structure in Python
+- `Hash Map`: Views the Hash Map Structure in Python 
+- `Binary Search Tree`: Views the Binary Search Tree in Python
 
 # More Information 
 
