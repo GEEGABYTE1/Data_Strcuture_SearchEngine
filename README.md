@@ -12,6 +12,8 @@ Made in Python.
 - `Queue`: Views the Queue Structure in Python
 - `Hash Map`: Views the Hash Map Structure in Python 
 - `Binary Search Tree`: Views the Binary Search Tree in Python
+- `MaxHeap`: Views the basic Max Heap 
+- `Min Heap`: Views the basic Min Heap 
 
 # More Information 
 
