@@ -13,7 +13,7 @@ Made in Python.
 - `Hash Map`: Views the Hash Map Structure in Python 
 - `Binary Search Tree`: Views the Binary Search Tree in Python
 - `MaxHeap`: Views the basic Max Heap 
-- `Min Heap`: Views the basic Min Heap 
+- `MinHeap`: Views the basic Min Heap 
 
 # More Information 
 
