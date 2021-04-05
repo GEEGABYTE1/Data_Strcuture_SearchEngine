@@ -15,6 +15,8 @@ class Script:
 
             def set_link(self, new_link):
                 self.link = new_link 
+            
+            *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1)*
                  """
 
         return string
@@ -53,6 +55,8 @@ class Script:
                             current_node = None 
                         else:
                             current_node = next_node 
+               
+              *TIME COMPLEXITY TO RETRIEVE VALUE: O(N) or Omega(1)*
                 """
         return string
     
@@ -95,6 +99,8 @@ class Script:
                     return item_to_remove.get_value()
                 else:
                     print(\"The Stack is Empty\")
+                    
+           *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N) or Omega(1)*
                 """
         return string
 
@@ -149,6 +155,8 @@ class Script:
                     return item_to_remove.get_value()
                 else:
                     print(\"The Queue Is Empty\")
+                    
+            *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N) or Omega(1)*
             """
         return string
 
@@ -198,6 +206,8 @@ class Script:
                                 node.children = node.children[-1].children 
                     except IndexError:
                         return "This value is not valid"
+                
+                *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N) or Omega(1)*
                 
                 *********************************************************************
                 The .traverse() function changes if you want to only interate a tree 
@@ -322,6 +332,8 @@ class Script:
                     
                     retrieve_collisions += 1
                     return 
+                    
+           *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1)*
                     """
         return string
     
@@ -407,6 +419,9 @@ class Script:
                     idx = smaller_child_idx 
                 
                 print("Heap Restored {}".format(self.heap_list))
+              
+             *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N) or Omega(1)*
+             
                 """
         return string
 
@@ -492,6 +507,8 @@ class Script:
                     idx = smaller_child_idx 
                 
                 print("Heap Restored {}".format(self.heap_list))
+               
+               *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1) or Omega(1)*
                 """
         return string
     
@@ -552,6 +569,8 @@ class Script:
                         start.extend(next_vertices)
                 
                 return False 
+                
+                *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N)*
 
                             """ 
         return string 
