@@ -38,7 +38,7 @@ class Script:
 
             def stringify_list(self):
                 current_node = self.get_head_node()
-                while curret_node:
+                while current_node:
                     if current_node.get_value() != None:
                         print(current_node.get_value())
                     current_node = current_node.get_link()
