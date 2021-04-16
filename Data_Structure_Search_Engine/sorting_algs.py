@@ -13,6 +13,10 @@ class Algs:
                         my_list[idx], my_list[idx + 1] = my_list[idx + 1], my_list[idx]
 
                     print(my_list)
+        
+        ###
+        Time Complexity: O(N^2)
+        ###
         """
 
         return string 
@@ -50,6 +54,10 @@ class Algs:
             elif right:
                 result += right 
             return result 
+            
+        ### 
+        Time complexity: O(N log N)
+        ###
         """
 
         return string
