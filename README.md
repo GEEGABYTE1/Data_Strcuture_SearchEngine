@@ -4,7 +4,7 @@ You can now search up the 7 data structures by typing the desired structure in t
 
 Made in Python.
 
-# Controls 
+# Controls for Data Structure Search Engine
 - `/quit`: Quits the program 
 - `Node`: Views the basic node class
 - `LinkedList`: Views the Linked List Structure in Python
@@ -17,8 +17,11 @@ Made in Python.
 
 # More Information 
 
-These data structures have only been made in Python and may or may not reflect other data structures in other languages. 
+These data structures and algorithms have only been made in Python and may or may not reflect other data structures and algorithms completely in other languages. 
 
 Some data structures shown may require prior knowledge of previous data structures which are shown seperately.
 
-The Node class was added although not a formal data structure, since it is the root of all basic data structures
+The Node class was added although not a formal data structure, since it is the root of all basic data structures.
+
+*To fully experience the whole program, run `user.py`.* 
+
