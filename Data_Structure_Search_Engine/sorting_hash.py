@@ -65,12 +65,13 @@ class HashMap:
 test2 = HashMap(6)
 test2.setter("Bubble Sort", initialize.bubble_sort())
 test2.setter("Merge Sort", initialize.merge_sort())
+test2.setter('Quicksort', initialize.quicksort())
 
 
 class Menu:
     def __init__(self, prompt=None):
         self.prompt = prompt 
-        lst = ["Bubble Sort", "Merge Sort"]
+        lst = ["Bubble Sort", "Merge Sort", 'Quicksort']
         print("Please note that all sort algorithms are written in Python3")
         print("-------------------------------------")
         for i in lst:
@@ -85,6 +86,9 @@ class Menu:
             
             elif self.prompt == "Merge Sort" or self.prompt == "Merge sort":
                 print(test2.retrieve("Merge Sort"))
+            
+            elif self.prompt == "QuickSort" or self.prompt == "Quicksort":
+                print(test2.retrieve('Quicksort'))
             
             elif self.prompt == "/quit":
                 break 
