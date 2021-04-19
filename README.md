@@ -19,6 +19,7 @@ Made in Python.
 - `/quit`: Quits the Engine and returns to the main engine
 - `Bubble Sort`: Views the basic Bubble Sort Algorithm 
 - `Merge Sort`: Views the basic Merge Sort Algorithm
+- `Quicksort`: Views the Quicksort Algorithm
 
 
 # More Information 
