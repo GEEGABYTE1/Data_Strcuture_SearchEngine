@@ -20,6 +20,7 @@ Made in Python.
 - `Bubble Sort`: Views the basic Bubble Sort Algorithm 
 - `Merge Sort`: Views the basic Merge Sort Algorithm
 - `Quicksort`: Views the Quicksort Algorithm
+- `Radix Sort`: Views the Radix Sort Algorithm 
 
 
 # More Information 
