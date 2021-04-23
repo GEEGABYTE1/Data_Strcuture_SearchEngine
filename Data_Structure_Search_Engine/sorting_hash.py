@@ -71,7 +71,7 @@ test2.setter('Quicksort', initialize.quicksort())
 class Menu:
     def __init__(self, prompt=None):
         self.prompt = prompt 
-        lst = ["Bubble Sort", "Merge Sort", 'Quicksort']
+        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort']
         print("Please note that all sort algorithms are written in Python3")
         print("-------------------------------------")
         for i in lst:
