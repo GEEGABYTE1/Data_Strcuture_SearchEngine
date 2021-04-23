@@ -54,27 +54,6 @@ class Algs:
             elif right:
                 result += right 
             return result 
-       ------------------------------------------------
-       RECURSIVE METHOD:
-       def merge(left, right, result=[]):
-            if len(left) == 0 or len(right) == 0:
-                if left:
-                    result += left 
-                elif right:
-                    result += right 
-                return result
-            else:
-                if left[0] < right[0]:
-                    result.append(left[0])
-                    left.pop(0)
-                else:
-                    result.append(right[0])
-                    right.pop(0)
-            return merge_recursive(left, right, result)
-            
-        ### 
-        Time complexity: O(N log N)
-        ###
         """
 
         return string
