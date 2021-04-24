@@ -66,6 +66,7 @@ test2 = HashMap(6)
 test2.setter("Bubble Sort", initialize.bubble_sort())
 test2.setter("Merge Sort", initialize.merge_sort())
 test2.setter('Quicksort', initialize.quicksort())
+test2.setter('Radix_Sort', initialize.radix_sort())
 
 
 class Menu:
@@ -89,6 +90,9 @@ class Menu:
             
             elif self.prompt == "QuickSort" or self.prompt == "Quicksort":
                 print(test2.retrieve('Quicksort'))
+            
+            elif self.prompt == "Radix Sort" or self.prompt == "RadixSort":
+                print(test2.retrieve('Radix_Sort'))
             
             elif self.prompt == "/quit":
                 break 

@@ -54,6 +54,27 @@ class Algs:
             elif right:
                 result += right 
             return result 
+       ------------------------------------------------
+       RECURSIVE METHOD:
+       def merge(left, right, result=[]):
+            if len(left) == 0 or len(right) == 0:
+                if left:
+                    result += left 
+                elif right:
+                    result += right 
+                return result
+            else:
+                if left[0] < right[0]:
+                    result.append(left[0])
+                    left.pop(0)
+                else:
+                    result.append(right[0])
+                    right.pop(0)
+            return merge_recursive(left, right, result)
+            
+        ### 
+        Time complexity: O(N log N)
+        ###
         """
 
         return string
@@ -86,6 +107,39 @@ class Algs:
         Time Complexity: O(N log N)
         ### 
         """
+        return string
+
+    def radix_sort(self):
+        string = """
+
+        def radix_sort(lst):
+            maximum_value = max(lst)
+            max_exponent = len(str(maximum_value))
+            being_sorted = lst[:]
+            
+            for exponent in range(max_exponent):
+                position = exponent + 1
+                index = -position 
+                digits = [ [] for i in range(10)]
+
+                for number in being_sorted:
+                    string_number = str(number)
+                    try:
+                        digit = string_number[index]
+                    except IndexError:
+                        digit = 0 
+                    digit = int(digit)
+                    digits[digit].append(number)
+                    being_sorted = []
+                    for numeral in digits:
+                        being_sorted.extend(numeral)
+
+            return being_sorted
+
+            ###
+            Time Complexity: O(N)
+            ###
+            """
         return string
 
 initialize = Algs()
