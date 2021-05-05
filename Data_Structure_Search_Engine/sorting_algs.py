@@ -142,4 +142,26 @@ class Algs:
             """
         return string
 
+    def linear_search(self):
+        string = """
+
+        def linear_search(lst, target_value):
+            matches = []
+            for i in range(len(lst)):
+                if lst[i] == target_value:
+                    matches.append(target_value)
+            if len(matches) > 0:
+                return matches 
+            else:
+                raise ValueError("{o} is not present in the array".format(o=target_value))
+
+
+        ###
+        Average Time Complexity: O(N) / 2 == O(N)
+        Best Case: O(1)
+        Worst Case: O(N)
+        """
+
+        return string
+
 initialize = Algs()

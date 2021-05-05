@@ -62,17 +62,18 @@ class HashMap:
             retrieve_collisions += 1
             return 
 
-test2 = HashMap(6)
+test2 = HashMap(7)
 test2.setter("Bubble Sort", initialize.bubble_sort())
 test2.setter("Merge Sort", initialize.merge_sort())
 test2.setter('Quicksort', initialize.quicksort())
 test2.setter('Radix_Sort', initialize.radix_sort())
+test2.setter('Linear*Search', initialize.linear_search())
 
 
 class Menu:
     def __init__(self, prompt=None):
         self.prompt = prompt 
-        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort']
+        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search']
         print("Please note that all sort algorithms are written in Python3")
         print("-------------------------------------")
         for i in lst:
@@ -93,6 +94,9 @@ class Menu:
             
             elif self.prompt == "Radix Sort" or self.prompt == "RadixSort":
                 print(test2.retrieve('Radix_Sort'))
+            
+            elif self.prompt == "Linear Search" or self.prompt == "linear search":
+                print(test2.retrieve('Linear*Search'))
             
             elif self.prompt == "/quit":
                 break 
