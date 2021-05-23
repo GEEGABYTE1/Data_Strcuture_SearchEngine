@@ -1,5 +1,4 @@
-# Data Structures Reference
-
+# Cs-102 Search Engine 🔦💻
 You can now search up the 7 data structures by typing the desired structure in the terminal
 
 Made in Python.
