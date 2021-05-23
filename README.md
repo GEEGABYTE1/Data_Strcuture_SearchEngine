@@ -14,6 +14,9 @@ Made in Python.
 - `Binary Search Tree`: Views the Binary Search Tree in Python
 - `MaxHeap`: Views the basic Max Heap 
 - `MinHeap`: Views the basic Min Heap 
+- `Graph`: Views the Graph Data structure
+- `BiDirectional LinkedList`: Views the Bidirectional LinkedList
+- 
 
 # Controsl for Sorting Algorithm Search Engine
 - `/quit`: Quits the Engine and returns to the main engine
@@ -27,7 +30,7 @@ Made in Python.
 
 These data structures and algorithms have only been made in Python and may or may not reflect other data structures and algorithms completely in other languages. 
 
-Stated time complexitites for both algorithms and data structures are base complexities in Python and are not unique to the specific methods. 
+Stated time complexitites for both algorithms and data structures (for some) are base complexities and are not unique to the specific methods. 
 
 Some data structures shown may require prior knowledge of previous data structures which are shown seperately.
 
