@@ -15,7 +15,7 @@ Made in Python.
 - `MinHeap`: Views the basic Min Heap 
 - `Graph`: Views the Graph Data structure
 - `BiDirectional LinkedList`: Views the Bidirectional LinkedList
-- 
+
 
 # Controsl for Sorting Algorithm Search Engine
 - `/quit`: Quits the Engine and returns to the main engine
