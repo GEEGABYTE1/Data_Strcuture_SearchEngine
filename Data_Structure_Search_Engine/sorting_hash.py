@@ -68,12 +68,13 @@ test2.setter("Merge Sort", initialize.merge_sort())
 test2.setter('Quicksort', initialize.quicksort())
 test2.setter('Radix_Sort', initialize.radix_sort())
 test2.setter('Linear*Search', initialize.linear_search())
+test2.setter("Naive_Pattern_Search", initialize.naive_pattern_search())
 
 
 class Menu:
     def __init__(self, prompt=None):
         self.prompt = prompt 
-        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search']
+        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search', 'Naive Pattern Search']
         print("Please note that all sort algorithms are written in Python3")
         print("-------------------------------------")
         for i in lst:
@@ -97,6 +98,9 @@ class Menu:
             
             elif self.prompt == "Linear Search" or self.prompt == "linear search":
                 print(test2.retrieve('Linear*Search'))
+
+            elif self.prompt == "Naive Pattern Search" or self.prompt == "Naive Pattern Search ":
+                print(test2.retrieve("Naive_Pattern_Search"))
             
             elif self.prompt == "/quit":
                 break 

@@ -164,4 +164,38 @@ class Algs:
 
         return string
 
+
+    def naive_pattern_search(self):
+        string = """
+
+        def naive_pattern_search(text, pattern):
+            print("Input Text: {}".format(text))
+            print("Input Pattern: {}".format(pattern))
+
+            for index in range(len(text)):
+                print("Text Index: {}".format(index))
+
+                match_count = 0 
+
+                for char in range(len(pattern)):
+                    print("Pattern Index: {}".format(char))
+
+                    if pattern[char] == text[char + index]:
+                        print("Match found!" )
+                        print("Match count at {}".format(match_count))
+                        match_count += 1
+                    else:
+                        break 
+                
+                if match_count == len(pattern):
+                    print("The pattern has been found at index {}".format(index))
+            
+
+            ###
+            Average Time Complexity: O(nk) 
+            Worse Time Complexity: O(n^2)
+            ###
+        """
+
+        return string 
 initialize = Algs()
