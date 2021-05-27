@@ -80,7 +80,7 @@ class Menu:
         for i in lst:
             print(i + "\t")
         print("-------------------------------------")
-        print("Please type in a Sort Algorithm you would want to see: ")
+        print("Please type in an Algorithm you would want to see: ")
         playing = True
         while playing:
             self.prompt = input()
