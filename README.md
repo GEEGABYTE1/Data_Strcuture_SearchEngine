@@ -23,6 +23,8 @@ Made in Python.
 - `Merge Sort`: Views the basic Merge Sort Algorithm
 - `Quicksort`: Views the Quicksort Algorithm
 - `Radix Sort`: Views the Radix Sort Algorithm 
+- `Linear Search`: Views the Linear Search Algorithm 
+- `Naive Pattern Search`: Views the Naive Pattern Search Algorithm
 
 
 # More Information 
