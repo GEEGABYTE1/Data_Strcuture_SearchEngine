@@ -17,7 +17,7 @@ Made in Python.
 - `BiDirectional LinkedList`: Views the Bidirectional LinkedList
 
 
-# Controsl for Sorting Algorithm Search Engine
+# Controls for Sorting Algorithm Search Engine
 - `/quit`: Quits the Engine and returns to the main engine
 - `Bubble Sort`: Views the basic Bubble Sort Algorithm 
 - `Merge Sort`: Views the basic Merge Sort Algorithm
@@ -25,6 +25,7 @@ Made in Python.
 - `Radix Sort`: Views the Radix Sort Algorithm 
 - `Linear Search`: Views the Linear Search Algorithm 
 - `Naive Pattern Search`: Views the Naive Pattern Search Algorithm
+- `Breadth-First Search`: Views the Bfs Algorithm
 
 
 # More Information 
@@ -36,6 +37,10 @@ Stated time complexitites for both algorithms and data structures (for some) are
 Some data structures shown may require prior knowledge of previous data structures which are shown seperately.
 
 The Node class was added although not a formal data structure, since it is the root of all basic data structures.
+
+Some algorithms may have two files listed. They are separated by a dash line to indicate to the user which file the script is apart of.
+
+*Users must have sufficient knowledge in computer science and also Python to understand the content*
 
 *To fully experience the whole program, run `user.py`.* 
 
