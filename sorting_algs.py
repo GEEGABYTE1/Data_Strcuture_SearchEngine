@@ -237,9 +237,44 @@ class Algs:
             print("Path found" )
             for node in goal_path:
                 print(node.value)
+
+        ###
+        TIME COMPLEXITY: O(N)
+        SPACE COMPLEXITY: O(N) + O(1)
+        ###
         
         """
+    
         return string 
+    
+    def dfs(self):
+        string = """
+
+        from tree import TreeNode # The Tree data structure is the same as the one listed in the software. 
+
+        def dfs(root_node, goal_value, path=()):
+            path = path + (root_node,)
+
+            if root_node.value == goal_value:
+                return path 
+            for child in root_node.children:
+                path_found = dfs(child, goal_value, path)
+
+                if path_found != None:
+                    return path_found
+
+            return None
+
+            ###
+            TIME COMPLEXITY: O(N)
+            SPACE COMPLEXITY: O(1)
+            ###
+        """
+        return string
+
+            
+
+
 
             
 initialize = Algs()
