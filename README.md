@@ -26,6 +26,7 @@ Made in Python.
 - `Linear Search`: Views the Linear Search Algorithm 
 - `Naive Pattern Search`: Views the Naive Pattern Search Algorithm
 - `Breadth-First Search`: Views the Bfs Algorithm
+- `Depth-First Search`: Views the Dfs Algorithm
 
 
 # More Information 
