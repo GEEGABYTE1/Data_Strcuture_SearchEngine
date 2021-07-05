@@ -10,11 +10,12 @@ Made in Python.
 - `Stack`: Views the Stack Structure in Python 
 - `Queue`: Views the Queue Structure in Python
 - `Hash Map`: Views the Hash Map Structure in Python 
-- `Binary Search Tree`: Views the Binary Search Tree in Python
+- `Tree`: Views the Tree structure in Python
 - `MaxHeap`: Views the basic Max Heap 
 - `MinHeap`: Views the basic Min Heap 
 - `Graph`: Views the Graph Data structure
 - `BiDirectional LinkedList`: Views the Bidirectional LinkedList
+- `Binary Search Tree`: Views the Binary Search Tree Implementation in Python 
 
 
 # Controls for Sorting Algorithm Search Engine
@@ -27,6 +28,7 @@ Made in Python.
 - `Naive Pattern Search`: Views the Naive Pattern Search Algorithm
 - `Breadth-First Search`: Views the Bfs Algorithm
 - `Depth-First Search`: Views the Dfs Algorithm
+- `Binary Search`: Views the Binary Search Algorithm
 
 
 # More Information 
