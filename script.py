@@ -674,13 +674,14 @@ class Script:
                     else:
                         self.right.insert(new_value)
             
-            def get_node_by_value(self, value):
+            def get_node_by_value(self, value, level=0):
+                level += 1
                 if value == self.value:
-                    return self.value 
+                    return self.value, level 
                 elif self.left and value < self.value:
-                    return self.left.get_node_by_value(value)
+                    return self.left.get_node_by_value(value, level)
                 elif self.right and value >= self.value:
-                    return self.right.get_node_by_value(value)
+                    return self.right.get_node_by_value(value,level)
                 else:
                     return None 
 
