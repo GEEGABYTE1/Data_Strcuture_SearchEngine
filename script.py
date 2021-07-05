@@ -174,52 +174,13 @@ class Script:
                 self.children = [i for i in self.children if i != child_node]
 
             def traverse(self):
-                level = 0
-                node = self
-                number = input("Please enter a number: ")
-
-                while len(node.children) > 0:
-                    level += 1
-                    try:
-                        if int(number) <= node.value:
-
-                            if int(number) == node.children[0].value:
-                                print(level)
-                                print(node.children[0].value)
-                                break
-                            else:
-                                print(level)
-                                print(node.children[0].value)
-                                node.value = node.children[0].value
-                                node.children = node.children[0].children 
-                        
-                        elif int(number) >= node.value:
-
-                            if int(number) == node.children[-1].value:
-                                print(level)
-                                print(node.children[-1].value)
-                                break
-                            else:
-                                print(level)
-                                print(node.children[-1].value)
-                                node.value = node.children[-1].value
-                                node.children = node.children[-1].children 
-                    except IndexError:
-                        return "This value is not valid"
-                
-                *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N) or Omega(1)*
-                
-                *********************************************************************
-                The .traverse() function changes if you want to only interate a tree 
-
-                def traverse(self):
-                    node = [self]
-                    while len(node) > 0:
-                        current_node = node.pop()
-                        print(current_node.value)
-                        node += current_node.children
-                        
-                        """
+                node = [self]
+                while len(node) > 0:
+                    current_node = node.pop()
+                    print(current_node.value)
+                    node += current_node.children
+                    
+                    """
         return string
     
     def HashMap(self):
@@ -688,9 +649,49 @@ class Script:
                 return node_to_remove 
          """    
         return string   
+    
+    def BST(self):
+        string = """
 
+        class BST:
+            def __init__(self, value, depth=1):
+                self.value = value 
+                self.depth = depth 
+                self.right = None
+                self.left = None 
+            
+            def insert(self, new_value):
+                if new_value < self.value:
+                    if self.left == None:
+                        self.left = BST(new_value, self.depth + 1)
+                        print("Node {value} has been added to the left of {parent} at {depth}".format(value=new_value, parent=self.value, depth=self.depth + 1))
+                    else:
+                        self.left.insert(new_value)
+                else:
+                    if self.right == None:
+                        self.right = BST(new_value, self.depth + 1)
+                        print("Node {value} has been added to the right of {parent} at depth {depth}".format(value=new_value, parent=self.value, depth=self.depth + 1))
+                    else:
+                        self.right.insert(new_value)
+            
+            def get_node_by_value(self, value):
+                if value == self.value:
+                    return self.value 
+                elif self.left and value < self.value:
+                    return self.left.get_node_by_value(value)
+                elif self.right and value >= self.value:
+                    return self.right.get_node_by_value(value)
+                else:
+                    return None 
 
-        
+            def depth_first_traversal(self):
+                if self.left:
+                    self.left.depth_first_traversal()
+                print("Depth: {depth}, Value: {value}".format(depth=self.depth, value=self.value))
+                if self.right:
+                    self.right.depth_first_traversal()
+            """
+        return string
 
 
 

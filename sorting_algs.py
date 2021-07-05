@@ -272,6 +272,35 @@ class Algs:
         """
         return string
 
+    def binary_search(self):
+        string = """
+        
+        def binary_search(sorted_list, goal):
+            if not sorted_list:
+                return 'value not found'
+            else:
+                mid_idx = len(sorted_list) // 2
+                mid_val = sorted_list[mid_idx]
+                if mid_val == goal:
+                    return mid_idx 
+                elif mid_val > goal:
+                    left_side = sorted_list[:mid_idx]
+                    return binary_search(left_side, goal)
+                elif mid_val < goal:
+                    right_side = sorted_list[mid_idx + 1:]
+                    result = binary_search(right_side, goal)
+                    if result == 'value not found':
+                        return result 
+                    else:
+                        return reult + mid_idx + 1
+                    
+        ### 
+        TIME COMPlEXITY: O(N/2)
+        SPACE COMPLEXITY: O(1)
+        ###
+        """
+        return string
+
             
 
 

@@ -76,19 +76,20 @@ test1.setter("Node", test.Node())
 test1.setter("LinkedList", test.LinkedList())
 test1.setter("Stack", test.Stack())
 test1.setter("Queue", test.Queue())
-test1.setter("Binary Search Tree", test.TreeNode())
+test1.setter("Tree", test.TreeNode())
 test1.setter("Hash Map", test.HashMap())
 test1.setter("MaxHeap", test.MaxHeap())
 test1.setter("MinHeap", test.MinHeap())
 test1.setter("Complex_Graph", test.graph())
 test1.setter("BiDirectional LinkedList", test.Double_Linked_List())
+test1.setter("Binary Search", test.BST())
 #print(test1.array)
 
 class Prompt:
 
     def __init__(self, prompt=None):
         self.prompt = prompt
-        lst = ["LinkedList", "BiDirectional LinkedList", "Stack", "Queue", "Node", "Binary Search Tree", "Hash Map", "MaxHeap", "MinHeap", "Graph"]
+        lst = ["LinkedList", "BiDirectional LinkedList", "Stack", "Queue", "Node", "Tree", "Binary Search Tree", "Hash Map", "MaxHeap", "MinHeap", "Graph"]
         print("Please note that all data structures are written in Python3")
         #print(lst)
         print("-------------------------------------")
@@ -113,8 +114,8 @@ class Prompt:
             elif self.prompt == "Queue" or self.prompt == "Queue ":
                 print(test1.retrieve("Queue"))
 
-            elif self.prompt == "Binary Search Tree" or self.prompt == "Tree":
-                print(test1.retrieve("Binary Search Tree"))
+            elif self.prompt == "Tree" or self.prompt == "Tree":
+                print(test1.retrieve("Tree"))
 
             elif self.prompt == "Hash Map" or self.prompt == "HashMap":
                 print(test1.retrieve("Hash Map"))
@@ -130,6 +131,9 @@ class Prompt:
             
             elif self.prompt == "BiDirectional LinkedList" or self.prompt == "bidirectional linkedlist":
                 print(test1.retrieve('BiDirectional LinkedList'))
+            
+            elif self.prompt == "Binary Search Tree" or self.prompt == "Binary Search Tree ":
+                print(test1.retrieve("Binary Search"))
 
             elif self.prompt == "/quit" or self.prompt == "\quit ":
                 break
