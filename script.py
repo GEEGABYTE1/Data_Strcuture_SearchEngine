@@ -381,7 +381,7 @@ class Script:
                 
                 print("Heap Restored {}".format(self.heap_list))
               
-             *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N) or Omega(1)*
+             *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N)*
              
                 """
         return string
@@ -469,7 +469,7 @@ class Script:
                 
                 print("Heap Restored {}".format(self.heap_list))
                
-               *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1) or Omega(1)*
+               *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1)*
                 """
         return string
     
