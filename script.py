@@ -333,8 +333,55 @@ class Script:
                     idx = self.parent_idx(idx)
                 
                 print("Heap Restored {}".format(self.heap_list))
+
+            def retrieve_min(self):
+                if self.count == 0:
+                    print("The heap is empty! ")
+                    return None 
+                else:
+                    minimum = self.heap_list[1]
+                    print("Removing {min} from {heap} ".format(min=minimum, heap=self.heap_list))
+                    self.heap_list[1] = self.heap_list[-1]
+                    self.count -= 1
+                    self.heap_list.pop()
+                    self.heapify_down()
+                    return minimum 
+            
+            def get_smaller_child_idx(self, idx):
+                if self.right_child_idx(idx) > self.count:
+                    print("Only the left child is available")
+                    return self.left_child_idx(idx)
+                else:
+                    left_child = self.heap_list[self.left_child_idx(idx)]
+                    right_child = self.heap_list[self.right_child_idx(idx)]
+
+                    if left_child < right_child:
+                        print("The left child is smaller than the right child")
+                        return self.left_child_idx(idx)
+                    else:
+                        print("The right child is smaller than the left child")
+                        return self.right_child_idx(idx)
+            
+            def child_present(self, idx):
+                if self.left_child_idx(idx) <= self.count:
+                    return True 
+
+            def heapify_down(self):
+                idx = 1 
+                while self.child_present(idx):
+                    smaller_child_idx = self.get_smaller_child_idx(idx)
+                    child = self.heap_list[smaller_child_idx]
+                    parent = self.heap_list[idx]
+
+                    if parent > child:
+                        self.heap_list[idx] = child
+                        self.heap_list[smaller_child_idx] = parent 
+                    
+                    idx = smaller_child_idx 
+                
+                print("Heap Restored {}".format(self.heap_list))
               
-             *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N)*
+             *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N) or Omega(1)*
              
                 """
         return string
@@ -374,8 +421,55 @@ class Script:
                     idx = self.parent_idx(idx)
                 
                 print("Heap Restored {}".format(self.heap_list))
+
+            def retrieve_min(self):
+                if self.count == 0:
+                    print("The heap is empty! ")
+                    return None 
+                else:
+                    minimum = self.heap_list[1]
+                    print("Removing {min} from {heap} ".format(min=minimum, heap=self.heap_list))
+                    self.heap_list[1] = self.heap_list[-1]
+                    self.count -= 1
+                    self.heap_list.pop()
+                    self.heapify_down()
+                    return minimum 
+            
+            def get_smaller_child_idx(self, idx):
+                if self.right_child_idx(idx) > self.count:
+                    print("Only the left child is available")
+                    return self.left_child_idx(idx)
+                else:
+                    left_child = self.heap_list[self.left_child_idx(idx)]
+                    right_child = self.heap_list[self.right_child_idx(idx)]
+
+                    if left_child < right_child:
+                        print("The left child is smaller than the right child")
+                        return self.left_child_idx(idx)
+                    else:
+                        print("The right child is smaller than the left child")
+                        return self.right_child_idx(idx)
+            
+            def child_present(self, idx):
+                if self.left_child_idx(idx) <= self.count:
+                    return True 
+
+            def heapify_down(self):
+                idx = 1 
+                while self.child_present(idx):
+                    smaller_child_idx = self.get_smaller_child_idx(idx)
+                    child = self.heap_list[smaller_child_idx]
+                    parent = self.heap_list[idx]
+
+                    if parent < child:
+                        self.heap_list[idx] = child
+                        self.heap_list[smaller_child_idx] = parent 
+                    
+                    idx = smaller_child_idx 
+                
+                print("Heap Restored {}".format(self.heap_list))
                
-               *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1)*
+               *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1) or Omega(1)*
                 """
         return string
     
@@ -580,14 +674,13 @@ class Script:
                     else:
                         self.right.insert(new_value)
             
-            def get_node_by_value(self, value, level=0):
-                level += 1
+            def get_node_by_value(self, value):
                 if value == self.value:
-                    return self.value, level 
+                    return self.value 
                 elif self.left and value < self.value:
-                    return self.left.get_node_by_value(value, level)
+                    return self.left.get_node_by_value(value)
                 elif self.right and value >= self.value:
-                    return self.right.get_node_by_value(value,level)
+                    return self.right.get_node_by_value(value)
                 else:
                     return None 
 
