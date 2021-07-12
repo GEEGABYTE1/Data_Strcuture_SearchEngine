@@ -389,85 +389,86 @@ class Script:
     def MaxHeap(self):
         string = """
 
-        class MinHeap:
-            def __init__(self):
-                self.heap_list = [None]
-                self.count = 0
+       class MaxHeap:
+    def __init__(self):
+        self.heap_list = [None]
+        self.count = 0 
 
-            def add(self, element):
-                self.count += 1
-                self.heap_list.append(element)
-                self.heapify_up()
+    def add(self, new_element):
+        self.heap_list.append(new_element)
+        self.count += 1
+        self.heapify_up()
+
+    def parent_idx(self, idx):
+        return idx // 2
+
+    def left_child_idx(self, idx):
+        return idx * 2
+
+    def right_child_idx(self, idx):
+        return idx * 2 + 1
+
+    def heapify_up(self):
+        idx = self.count 
+        while self.parent_idx(idx) > 0:
+            child = self.heap_list[idx]
+            parent = self.heap_list[self.parent_idx(idx)]
             
-            def parent_idx(self, idx):
-                return idx // 2
-
-            def left_child_idx(self, idx):
-                return idx * 2
-
-            def right_child_idx(self, idx):
-                return (idx * 2) + 1
-
-            def heapify_up(self):
-                idx = self.count 
-                while self.parent_idx(idx) > 0:
-                    child = self.heap_list[idx]
-                    parent = self.heap_list[self.parent_idx(idx)]
-
-                    if parent < child:
-                        print("Swapping {parent} with {child} ".format(parent=parent, child=child))
-                        self.heap_list[idx] = parent 
-                        self.heap_list[self.parent_idx(idx)] = child 
-                    idx = self.parent_idx(idx)
-                
-                print("Heap Restored {}".format(self.heap_list))
-
-            def retrieve_min(self):
-                if self.count == 0:
-                    print("The heap is empty! ")
-                    return None 
-                else:
-                    minimum = self.heap_list[1]
-                    print("Removing {min} from {heap} ".format(min=minimum, heap=self.heap_list))
-                    self.heap_list[1] = self.heap_list[-1]
-                    self.count -= 1
-                    self.heap_list.pop()
-                    self.heapify_down()
-                    return minimum 
+            if parent < child:
+                print('Swapping {parent} with {child}'.format(parent=parent, child=child))
+                self.heap_list[idx] = parent 
+                self.heap_list[self.parent_idx(idx)] = child 
             
-            def get_smaller_child_idx(self, idx):
-                if self.right_child_idx(idx) > self.count:
-                    print("Only the left child is available")
-                    return self.left_child_idx(idx)
-                else:
-                    left_child = self.heap_list[self.left_child_idx(idx)]
-                    right_child = self.heap_list[self.right_child_idx(idx)]
+            idx = self.parent_idx(idx)
+        
+        print("Heap Restored {}".format(self.heap_list))
+    
+    def retrieve_max(self):
+        if self.count == 0:
+            print('The Heap is empty {}'.format(self.heap_list))
+        else:
+            maximum = self.heap_list[1]
+            print('Removing {max} from {heap}'.format(max=maximum, heap=self.heap_list))
+            self.heap_list[1] = self.heap_list[-1]
+            self.heap_list.pop()
+            self.count -= 1
+            self.heapify_down()
+            return maximum 
 
-                    if left_child < right_child:
-                        print("The left child is smaller than the right child")
-                        return self.left_child_idx(idx)
-                    else:
-                        print("The right child is smaller than the left child")
-                        return self.right_child_idx(idx)
+    def get_bigger_child_idx(self, idx):
+        if self.right_child_idx(idx) > self.count:
+            print('There is only a left child')
+            return self.left_child_idx(idx)
+        else:
+            left = self.heap_list[self.left_child_idx(idx)]
+            right = self.heap_list[self.right_child_idx(idx)]
+
+            if left > right:
+                print("The left child is bigger")
+                return self.left_child_idx(idx)
+            else:
+                print("The right child is bigger")
+                return self.right_child_idx(idx)
+        
+    def child_present(self, idx):
+        if self.left_child_idx(idx) <= self.count:
+            return True 
+    
+    def heapify_down(self):
+        idx = 1 
+        while self.child_present(idx):
+            bigger_child_idx = self.get_bigger_child_idx(idx)
+            child = self.heap_list[bigger_child_idx]
+            parent = self.heap_list[idx]
+
+            if parent < child:
+                print("Swapping {parent} with {child}".format(parent=parent, child=child))
+                self.heap_list[idx] = child 
+                self.heap_list[bigger_child_idx] = parent 
             
-            def child_present(self, idx):
-                if self.left_child_idx(idx) <= self.count:
-                    return True 
-
-            def heapify_down(self):
-                idx = 1 
-                while self.child_present(idx):
-                    smaller_child_idx = self.get_smaller_child_idx(idx)
-                    child = self.heap_list[smaller_child_idx]
-                    parent = self.heap_list[idx]
-
-                    if parent < child:
-                        self.heap_list[idx] = child
-                        self.heap_list[smaller_child_idx] = parent 
-                    
-                    idx = smaller_child_idx 
-                
-                print("Heap Restored {}".format(self.heap_list))
+            idx = bigger_child_idx
+        
+        print('Heap Restored {}'.format(self.heap_list))
                
                *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1) or Omega(1)*
                 """
