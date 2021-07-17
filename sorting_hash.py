@@ -62,7 +62,7 @@ class HashMap:
             retrieve_collisions += 1
             return 
 
-test2 = HashMap(20)
+test2 = HashMap(22)
 test2.setter("Bubble Sort", initialize.bubble_sort())
 test2.setter("Merge Sort", initialize.merge_sort())
 test2.setter('Quicksort', initialize.quicksort())
@@ -72,12 +72,13 @@ test2.setter("Naive_Pattern_Search", initialize.naive_pattern_search())
 test2.setter("Bfs", initialize.bfs())
 test2.setter("DFS_", initialize.dfs())
 test2.setter("Bin_Search", initialize.binary_search())
+test2.setter("heapsort", initialize.heapsort())
 
 
 class Menu:
     def __init__(self, prompt=None):
         self.prompt = prompt 
-        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search', 'Naive Pattern Search', 'Breadth-First Search', 'Depth-First Search', 'Binary Search']
+        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search', 'Naive Pattern Search', 'Breadth-First Search', 'Depth-First Search', 'Binary Search', 'Heapsort']
         print("Please note that all sort algorithms are written in Python3")
         print("-------------------------------------")
         for i in lst:
@@ -114,6 +115,9 @@ class Menu:
             
             elif self.prompt == "Binary Search" or self.prompt == "Binary Search":
                 print(test2.retrieve("Bin_Search"))
+            
+            elif self.prompt == "Heapsort" or self.prompt == "heapsort":
+                print(test2.retrieve("heapsort"))
             
             elif self.prompt == "/quit":
                 break 

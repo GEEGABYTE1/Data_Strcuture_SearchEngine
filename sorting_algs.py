@@ -301,6 +301,46 @@ class Algs:
         """
         return string
 
+    def heapsort(self):
+        string = """
+
+        from heap import MaxHeap                (From the same heap written in the program)
+
+        def heapsort(lst):
+            sort = []
+            max_heap = MaxHeap()
+
+            for i in lst:
+                max_heap.add(i)
+            while max_heap.count > 0:
+                max_value = max_heap.retrieve_max()
+                sort.insert(0, max_value)
+            
+            return sort 
+        
+        ------------------------------------------------------------------
+        *RECURSION* 
+
+        def heapsort_recursion(lst, max_heap, sort=[]):
+            if len(sort) == 0:
+                for i in lst:
+                    max_heap.add(i)
+            
+            if max_heap.count > 0:
+                max_value = max_heap.retrieve_max()
+                sort.insert(0, max_value)
+            else:
+                return sort 
+            
+            return heapsort_recursion(lst, max_heap, sort)
+        
+        ###
+        TIME COMPLEXITY: O(n log n)
+        ### 
+        """
+
+        return string
+
             
 
 

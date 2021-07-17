@@ -3,7 +3,7 @@ class Init:
     def __init__(self):
         prompting = True 
         print("Welcome to the CS-102 Search Engine! ")
-        print("You can seach up: ")
+        print("You can search up: ")
         print("-------------------------------------")
         print("1) Advanced and Linear Data Structures ")
         print("2) Sorting Algorithms ")
