@@ -29,6 +29,7 @@ Made in Python.
 - `Breadth-First Search`: Views the Bfs Algorithm
 - `Depth-First Search`: Views the Dfs Algorithm
 - `Binary Search`: Views the Binary Search Algorithm
+- `Heapsort`: Views the Heapsort Algorithm
 
 
 # More Information 
