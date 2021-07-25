@@ -533,6 +533,12 @@ class Script:
                         start.extend(next_vertices)
                 
                 return False 
+
+                graph = Graph()
+                dictionary = {}
+                for vertex, edge in graph.items():
+                    edges = list(edge.edges.keys())
+                    dictionary[vertex] = edges
                 
                 *TIME COMPLEXITY TO RETRIEVE A VALUE: O(N)*
 
