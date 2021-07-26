@@ -62,7 +62,7 @@ class HashMap:
             retrieve_collisions += 1
             return 
 
-test2 = HashMap(25)
+test2 = HashMap(27)
 test2.setter("Bubble Sort", initialize.bubble_sort())
 test2.setter("Merge Sort", initialize.merge_sort())
 test2.setter('Quicksort', initialize.quicksort())
@@ -74,12 +74,13 @@ test2.setter("DFS_", initialize.dfs())
 test2.setter("Bin_Search", initialize.binary_search())
 test2.setter("heapsort", initialize.heapsort())
 test2.setter("graph_search_dfs", initialize.graph_search_dfs())
+test2.setter("graph_search_BFS", initialize.graph_search_bfs())
 
 
 class Menu:
     def __init__(self, prompt=None):
         self.prompt = prompt 
-        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search', 'Naive Pattern Search', 'Breadth-First Search', 'Depth-First Search', 'Binary Search', 'Heapsort', 'Graph Search (DFS)']
+        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search', 'Naive Pattern Search', 'Breadth-First Search', 'Depth-First Search', 'Binary Search', 'Heapsort', 'Graph Search (DFS)', 'Graph Search (BFS)']
         print("Please note that all sort algorithms are written in Python3")
         print("-------------------------------------")
         for i in lst:
@@ -121,7 +122,11 @@ class Menu:
                 print(test2.retrieve("heapsort"))
             
             elif self.prompt == "Graph Search (DFS)" or self.prompt == "Graph Search(DFS)":
-                print(test2.retrieve("graph_search_dfs"))            
+                print(test2.retrieve("graph_search_dfs")) 
+
+            elif self.prompt == "Graph Search (BFS)" or self.prompt == "Graph Search(BFS)":
+                print(test2.retrieve('graph_search_BFS'))
+
             elif self.prompt == "/quit":
                 break 
             else:
