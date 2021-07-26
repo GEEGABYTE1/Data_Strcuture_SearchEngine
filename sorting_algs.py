@@ -365,6 +365,39 @@ class Algs:
         """
         return string
 
+    def graph_search_bfs(self):
+        string = """ 
+
+        from graph import dictionary            # The dictionary is the dictionary used in the Graph definition #
+        def bfs(graph, start_vertex, target):
+            path = [start_vertex]
+            vertex_and_path = [start_vertex, path]
+            bfs_queue = [vertex_and_path]
+            visited = set()
+
+            while bfs_queue:
+                current_vertex, path = bfs_queue.pop()
+                visited.add(current_vertex)
+
+                for neighbour in graph[current_vertex]:
+                    if not neighbour in visited:
+                        if neighbour == target:
+                            path.append(neighbour)
+                            return path 
+                        else:
+                            path.append(neighbour)
+                            bfs_queue.append([neighbour, path])
+            
+            return None
+
+
+            ###
+            TIME COMEPLEXITY: O(no. of vertices + no. of edges)
+            ###
+        """
+        return string
+
+
 
 
             
