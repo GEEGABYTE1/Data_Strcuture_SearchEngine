@@ -1,4 +1,4 @@
-# Cs-102 Search Engine 🔦💻
+# Cs Search Engine 🔦💻
 You can now search up data structures and algorithms for reference with this search engine.
 
 Made in Python.
