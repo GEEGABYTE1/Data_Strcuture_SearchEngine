@@ -359,6 +359,16 @@ class Algs:
                         if path:
                             return path 
 
+        Graph Format: {'vertex1': [edges], 'vertex2: [edges]'}
+
+        updated_graph = {}
+
+        for vertex, edge in graph_dict.items():
+            edges = list(edge.edges.keys())
+            updated_graph[vertex] = edges 
+        
+        dfs(updated_graph, start_vertex, target)
+
         ###
         TIME COMEPLEXITY: O(no. of vertices + no. of edges)
         ###
@@ -390,12 +400,73 @@ class Algs:
             
             return None
 
+        Graph Format: {'vertex1': [edges], 'vertex2: [edges]'}
 
-            ###
-            TIME COMEPLEXITY: O(no. of vertices + no. of edges)
-            ###
+        updated_graph = {}
+
+        for vertex, edge in graph_dict.items():
+            edges = list(edge.edges.keys())
+            updated_graph[vertex] = edges 
+        
+        bfs(updated_graph, start_vertex, target)
+
+
+        ###
+        TIME COMEPLEXITY: O(no. of vertices + no. of edges)
+        ###
         """
         return string
+
+    def dijkstras(self):
+        string = """
+
+        from graph import graph_dict       # The graph_dict is the dictionary returned from the Graph Data Structure after adding vertices and edges #
+        from heapq import heappop, heappush 
+        from math import inf 
+
+        def dijkstras(graph, start):
+            distances = {}
+            distances[start] = 0 
+            for vertex in graph.keys():
+                distances[vertex] = inf 
+            
+            vertices_to_explore = [(0, start)]
+
+            while vertices_to_explore:
+                current_distance, current_vertex = heappop(vertices_to_explore)
+                for neighbour, edge_weight in graph[current_vertex]:
+                    new_distance = current_distance + edge_weight 
+
+                    if new_distance < distances[neighbour]:
+                        distances[neighbour] = new_distance 
+                        heappush(vertices_to_explore, (new_distance, neighbour))
+                
+            return distances 
+        
+
+        Graph Format Input: {key: [('neighbour1', weight1), ('neighbour2', weight2)]...}
+
+        new_graph = {}
+        for vertex, edge in graph_dict.items():
+            edges = edge.edges
+            lst = []
+            for neighbour, weight in edges.items():
+                lst.append((neighbour, weight))
+            
+            new_graph[vertex] = lst 
+        
+        dijkstras(new_graph, start_vertex)
+    
+        ### 
+        TIME COMPLEXITY: O(no. vertices + no.edges log no. vertices)
+        ###
+        """
+
+        return string
+            
+            
+
+
 
 
 
