@@ -32,7 +32,7 @@ Made in Python.
 - `Heapsort`: Views the Heapsort Algorithm
 - `Graph Search (DFS)`: Views the Depth-First Version of Graph Search
 - `Graph Search (BFS)`: Views the Breadth-First Version of Graph Search
-
+- `'Dijkstras`: Views the Dijkstras Algorithm
 
 # More Information 
 
