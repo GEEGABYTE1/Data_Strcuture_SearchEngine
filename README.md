@@ -33,6 +33,7 @@ Made in Python.
 - `Graph Search (DFS)`: Views the Depth-First Version of Graph Search
 - `Graph Search (BFS)`: Views the Breadth-First Version of Graph Search
 - `'Dijkstras`: Views the Dijkstras Algorithm
+- `A*`: Views the A* Search Algorithm
 
 # More Information 
 
