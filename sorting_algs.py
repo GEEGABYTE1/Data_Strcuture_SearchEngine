@@ -444,7 +444,7 @@ class Algs:
             return distances 
         
 
-        Graph Format Input: {key: [('neighbour1', weight1), ('neighbour2', weight2)]...}
+        # Graph Format Input: {key: [('neighbour1', weight1), ('neighbour2', weight2)]...}
 
         new_graph = {}
         for vertex, edge in graph_dict.items():
@@ -463,7 +463,75 @@ class Algs:
         """
 
         return string
+
+    def a_star(self):
+        string = """ 
+
+        The vertex objects need coordinates for this algorithm. In our example, we have set the coordinates a tuple named 'self.position = (x, y)'.
+
+        from graph import graph_dict       # The graph_dict is the dictionary returned from the Graph Data Structure after adding vertices and edges #
+        from heapq import heappop, heappush 
+        from math import inf, sqrt 
+
+        def manhattan_heuristic(start, target):
+            x_distance = abs(start.position[0] - target.position[0])
+            y_distance = abs(start.position[1] - target.position[1])
+            return x_distance + y_distance 
+    
+        def euclidean_heuristic(start, target):
+            x_distance = abs(start.position[0] - target.position[0])
+            y_distance = abs(start.position[1] - target.position[1])
+            return sqrt(x_distance ** 2 + y_distance ** 2)
+
+        def a_star(graph, start, target):
+            count = 0 
+            paths_and_distances = {}
+            for vertex in graph.keys():
+                paths_and_distances[vertex] = [inf, [start.value]]
+            paths_and_distances[start][0] = 0 
+            vertices_to_explore = [(0, start)]
             
+            while vertices_to_explore and paths_and_distances[target][0] == inf:
+                current_distance, current_vertex = heappop(vertices_to_explore)
+                for neighbour, edge_weight in graph[current_vertex]:
+                    new_distance = current_distance + edge_weight + heursitic(neighbour, target)            # .heuristic() can be any heursitic function. Examples are stated above 
+                    new_path = paths_and_distances[current_vertex][1] + [neighbour.value]
+
+                    if new_distance < paths_and_distances[neighbour][0]:
+                        paths_and_distances[neighbour][0] = new_distance 
+                        paths_and_distances[neighbour][1] = new_path 
+                        heappush(vertices_to_explore, (new_distance, neighbour))
+                        count += 1
+
+            return paths_and_distances[target][1]
+
+            # Graph Format Input: {vertex_object: [('neighbour1_object', weight1), ('neighbour2_object', weight2)]...}
+
+            # Both the vertex and it's neighbours must be a Vertex object for our alg to work.
+            
+
+            dictionary = {}
+            
+            for vertex, edge in graph_dict.items():
+                for vertex_obj in objects:                                   # It is good to keep a list of raw Vertex Objects in the graph
+                    if vertex == vertex_obj.value:
+                        lst = []
+                        edge = edge.edges                                       # By definition of our Vertex Class
+                        for neighbour, weight in edge.items():
+                            for neighbour_obj in objects:
+                                if neighbour == neighbour_obj.value:
+                                    lst.append((neighbour_obj, weight))
+                        dictionary[vertex_obj] = lst 
+            
+            ### 
+            TIME COMPLEXITY: O(b^d)
+            b = Branching Factor 
+            d = Depth from Start Vertex to End Vertex
+            ###
+            """
+        return string
+
+
             
 
 

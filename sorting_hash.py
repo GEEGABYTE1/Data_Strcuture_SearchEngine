@@ -76,12 +76,13 @@ test2.setter("heapsort", initialize.heapsort())
 test2.setter("graph_search_dfs", initialize.graph_search_dfs())
 test2.setter("graph_search_BFS", initialize.graph_search_bfs())
 test2.setter("Dijkstras", initialize.dijkstras())
+test2.setter("A*", initialize.a_star())
 
 
 class Menu:
     def __init__(self, prompt=None):
         self.prompt = prompt 
-        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search', 'Naive Pattern Search', 'Breadth-First Search', 'Depth-First Search', 'Binary Search', 'Heapsort', 'Graph Search (DFS)', 'Graph Search (BFS)', "Dijkstras"]
+        lst = ["Bubble Sort", "Merge Sort", 'Quicksort', 'Radix Sort', 'Linear Search', 'Naive Pattern Search', 'Breadth-First Search', 'Depth-First Search', 'Binary Search', 'Heapsort', 'Graph Search (DFS)', 'Graph Search (BFS)', "Dijkstras", 'A*']
         print("Please note that all sort algorithms are written in Python3")
         print("-------------------------------------")
         for i in lst:
@@ -130,6 +131,9 @@ class Menu:
             
             elif self.prompt == "Dijkstras" or self.prompt == "Dijkstras ":
                 print(test2.retrieve("Dijkstras"))
+            
+            elif self.prompt == "A*" or self.prompt == "a*":
+                print(test2.retrieve('A*'))
 
             elif self.prompt == "/quit":
                 break 
