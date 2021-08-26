@@ -419,7 +419,7 @@ class Script:
                             self.heap_list[idx] = parent 
                             self.heap_list[self.parent_idx(idx)] = child 
                         
-                        idx = self.count 
+                        idx = self.parent_idx(idx)
                     
                     print("Heap Restored {}".format(self.heap_list))
 
@@ -472,7 +472,8 @@ class Script:
                     print("Heap Restored {}".format(self.heap_list))
 
         
-               *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1) 
+               *TIME COMPLEXITY TO RETRIEVE A VALUE: O(1)*
+               *Traversal: O( log n)*
                 """
         return string
     
